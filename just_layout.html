@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        AI MAturity model 
+    </title>
+    <style>
+        *{
+           font-family: Arial, Helvetica, sans-serif; 
+        }
+        table, th,td{
+            border: 2px solid #ffffff;
+            
+            margin-bottom: 15px;
+            
+            padding: 15px;
+            
+        }
+         td {
+        background-color: #81bdcc;
+        text-align: left;
+        vertical-align: top;
+        }
+        th{
+            background-color: #495897;
+            color: white;
+            text-align: center;
+        }
+
+        td.selected {
+            background-color: #e6b753;
+            cursor: pointer; /* Indicate that the cells are clickable */
+        }
+
+        h1{
+            margin-left: 15px;
+        }
+
+        #chartContainer {
+            height: 100%;
+        }
+
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .left {
+            width:70vw;
+            background-color: rgb(230, 242, 247);
+            height: 100%;
+            overflow-x: auto;
+            overflow-y: auto;
+        }
+
+        .right {
+            width: 30vw;
+            display: flex;
+            background-color: lightgoldenrodyellow;
+            flex-direction: column;
+            height: 100%;
+            overflow-y: auto;
+            overflow-x: auto;
+        }  
+
+        .section {
+            background-color: #c1dfd8;
+            padding: 15px;
+            margin-bottom: 25px;
+            margin-left: 25px;
+            margin-right: 25px;
+            border-radius: 5px;
+            cursor: pointer;    
+            overflow-x: auto;       
+        }
+
+        .section h2 {
+            margin-top: 15px;
+            background-color: #495897;
+            padding: 10px; 
+            border-radius: 5px;
+            color: white;
+        }
+        
+        .content {
+            display: none; /* Initially hide content */
+            margin-top: 15px;
+        }
+
+        .expanded .content {
+            display: block; /* Show content when section is expanded */
+        }
+
+        .button {
+            border: none;
+            color: rgb(253, 253, 253);
+            padding: 15px 28px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 0;
+            cursor: pointer;
+            width: 30%;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            
+        }
+
+        .button1 {
+            background-color: #276d53;
+            
+        } 
+        
+
+    </style>
+</head>
+
+<body>
+    <div class="left">
+        <h1> AI Maturity Model</h1>
+
+        <div class="section">
+            <h2> STRATEGIE </h2>
+            <div class="content">
+                <table id="SQ1" style="width:100%">
+                    <tr>
+                        <th>Questions</th>
+                        <th>Maturity level 1</th>
+                        <th>Maturity level 2</th>
+                        <th>Maturity level 3</th>
+                        <th>Maturity level 4</th>
+                        <th>Maturity level 5</th>
+                    </tr>
+                    <tr>
+                        <td>Question 1</td>
+                        <td data-value="1">Jackson</td>
+                        <td data-value="2">94</td>
+                        <td data-value="3">Eve</td>
+                        <td data-value="4">Jackson</td>
+                        <td data-value="5">94</td>
+                    </tr>
+                    <tr>
+                        <td>Question 2</td>
+                        <td data-value="1">Jackson</td>
+                        <td data-value="2">94</td>
+                        <td data-value="3">Eve</td>
+                        <td data-value="4">Jackson</td>
+                        <td data-value="5">94</td>
+                    </tr>  
+                </table>
+                <p> Where you wanna be? </p>
+                <table id="WB1" style="width:100%">
+                    <tr>
+                        <th>Questions</th>
+                        <th>Maturity level 1</th>
+                        <th>Maturity level 2</th>
+                        <th>Maturity level 3</th>
+                        <th>Maturity level 4</th>
+                        <th>Maturity level 5</th>
+                    </tr>
+                    <tr>
+                        <td>Question 1</td>
+                        <td data-value="1">Jackson</td>
+                        <td data-value="2">94</td>
+                        <td data-value="3">Eve</td>
+                        <td data-value="4">Jackson</td>
+                        <td data-value="5">94</td>
+                    </tr>                   
+                         
+                </table>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2> MITARBEITER*INNEN & KULTUR </h2>
+            <div class="content">
+                <table id="SQ2" style="width:100%">
+                    <tr>
+                        <th>Questions</th>
+                        <th>Maturity level 1</th>
+                        <th>Maturity level 2</th>
+                        <th>Maturity level 3</th>
+                        <th>Maturity level 4</th>
+                        <th>Maturity level 5</th>
+                    </tr>
+                    <tr>
+                        <td>Question 1</td>
+                        <td data-value="1">Jackson</td>
+                        <td data-value="2">94</td>
+                        <td data-value="3">Eve</td>
+                        <td data-value="4">Jackson</td>
+                        <td data-value="5">94</td>
+                    </tr>                                         
+                </table>
+                <p>  </p>
+                <table id="WB2" style="width:100%">
+                    <tr>
+                        <th>Questions</th>
+                        <th>Maturity level 1</th>
+                        <th>Maturity level 2</th>
+                        <th>Maturity level 3</th>
+                        <th>Maturity level 4</th>
+                        <th>Maturity level 5</th>
+                    </tr>
+                    <tr>
+                        <td>Question 1</td>
+                        <td data-value="1">Jackson</td>
+                        <td data-value="2">94</td>
+                        <td data-value="3">Eve</td>
+                        <td data-value="4">Jackson</td>
+                        <td data-value="5">94</td>
+                    </tr>                   
+                      
+                </table>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2> ORGANISATION & PROZESSE </h2>
+            <div class="content">
+                <table id="SQ3" style="width:100%">
+                    <tr>
+                        <th>Questions</th>
+                        <th>Maturity level 1</th>
+                        <th>Maturity level 2</th>
+                        <th>Maturity level 3</th>
+                        <th>Maturity level 4</th>
+                        <th>Maturity level 5</th>
+                    </tr>
+                    <tr>
+                        <td>Question 1</td>
+                        <td data-value="1">Jackson</td>
+                        <td data-value="2">94</td>
+                        <td data-value="3">Eve</td>
+                        <td data-value="4">Jackson</td>
+                        <td data-value="5">94</td>
+                    </tr>                   
+                       
+                </table>
+               
+                <table id="WB3" style="width:100%">
+                    <tr>
+                        <th>Questions</th>
+                        <th>Maturity level 1</th>
+                        <th>Maturity level 2</th>
+                        <th>Maturity level 3</th>
+                        <th>Maturity level 4</th>
+                        <th>Maturity level 5</th>
+                    </tr>
+                    <tr>
+                        <td>Question 1</td>
+                        <td data-value="1">Jackson</td>
+                        <td data-value="2">94</td>
+                        <td data-value="3">Eve</td>
+                        <td data-value="4">Jackson</td>
+                        <td data-value="5">94</td>
+                    </tr>                         
+                </table>
+            </div>
+        </div> 
+    </div>
+
+
+    <div class="right", id="chartContainer">    
+        <h1> The Chart </h1>  
+        <canvas id="radarChart"></canvas>
+        <button class="button button1" id="SubmitButton">Submit </button>
+    </div>
+    
+      
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+        //Function to handle section expand/collapse
+        document.querySelectorAll('.section h2').forEach(header => {
+            header.addEventListener('click', function() {
+                const section = this.parentElement;
+                section.classList.toggle('expanded');
+            });
+        });
+
+        
+        //Function to handle deselection option but lets you click multiple cell in the same row
+        /*function handleCellClick(e){
+            if(e.target.tagName==='TD' && e.target.cellIndex > 0){
+                //toggle the 'selected class on the clicked cell'
+                e.target.classList.toggle('selected');
+                updateRadarChart();
+            }
+        }*/
+
+        //Doesn't have deselecting option but let it have only one cell selected 
+        function handleCellClick(e) {
+                if (e.target.tagName === 'TD' && e.target.cellIndex > 0) {
+                    var row = e.target.parentElement;
+                    // Deselect all cells in the row
+                    row.querySelectorAll('td').forEach(cell => cell.classList.remove('selected'));
+                    // Select the clicked cell
+                    e.target.classList.add('selected');
+                    updateRadarChart();
+                }
+            }
+        
+
+        //add click event listener to each row in all tables
+        document.querySelectorAll('table').forEach(table=>{
+            table.addEventListener('click', handleCellClick)
+        })
+
+        // Function to get the selected value from a table
+        function getSelectedValue(tableId) {
+            var table = document.getElementById(tableId);
+            var rows = table.querySelectorAll('tr'); // Get all rows
+            var total = 0;
+            var count = 0;
+
+            rows.forEach(function(row) {
+                var selectedCell = row.querySelector('td.selected');
+                if (selectedCell) {
+                    total += parseInt(selectedCell.getAttribute('data-value'));
+                    count++;
+                }
+            });
+
+            return count > 0 ? Math.round((total/count)+0,4) : 0;
+        }
+
+        // Function to update the radar chart
+        function updateRadarChart() {
+            var dataSQ = [getSelectedValue('SQ1'), getSelectedValue('SQ2'), getSelectedValue('SQ3')];
+            var dataWB = [getSelectedValue('WB1'), getSelectedValue('WB2'), getSelectedValue('WB3')];
+            // Update the radar chart data
+            radarChart.data.datasets[0].data = dataSQ;
+            radarChart.data.datasets[1].data = dataWB;
+            radarChart.update();
+        }
+
+        
+
+        // Initial Radar Chart setup
+        var ctx = document.getElementById('radarChart').getContext('2d');
+
+        if (radarChart) {
+                radarChart.destroy(); // Destroy the previous chart instance
+            }
+
+        var radarChart = new Chart(ctx, {
+            type: 'radar',
+            data: {
+                labels: ['Strategie', 'Mitarbeiterinnen & Kultur', 'Organisation & Prozesse'],
+                datasets: [{
+                    label: 'This is where you are now',
+                    data: [0, 0, 0],
+                    backgroundColor: 'rgba(68, 119, 167, 0.5)',
+                    borderColor: 'rgba(68, 119, 167, 1)',
+                    pointBackgroundColor: 'rgba(68, 119, 167, 0.7)',
+                    pointBorderColor: 'rgba(68, 119, 167, 1)',
+                    pointRadius: 7,
+                   
+                
+                },{
+                    label: 'This is where you wanna be',
+                    data: [0, 0, 0],
+                    backgroundColor: 'rgba(255, 99, 132, 0.5)',
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    pointBackgroundColor: 'rgba(255, 99, 132, 0.7)',
+                    pointBorderColor: 'rgba(255, 99, 132, 1)',
+                    pointRadius: 8,
+                    pointBorderWidth: 2
+                }]
+            },
+            options: {
+                    scales: {
+                        r: {
+                            min: 0,
+                            max: 5,
+                            ticks:{
+                                stepSize:1,
+                            },
+                            beginAtZero: true                    
+                        }
+                    }
+                }
+        });
+
+        const SubmitButton=document.getElementById('SubmitButton');
+        SubmitButton.addEventListener('click',function(){
+            const leftSection = document.getElementsByClassName('left')[0];
+
+            // Get the selected values from each category
+            const selectedValueSQ1 = getSelectedValue('SQ1');
+            const selectedValueSQ2 = getSelectedValue('SQ2');
+            const selectedValueSQ3 = getSelectedValue('SQ3');
+
+            const result_category=Math.round((getSelectedValue('SQ1')+getSelectedValue('SQ2')+getSelectedValue('SQ3'))/3);
+            let res;
+            switch (result_category) {
+                case 1:
+                    res = "PIONEER";
+                    text1="Ihr Unternehmen steht am Anfang der KI-Reise und beginnt, das Potenzial dieser Technologie zu erkunden. Sie sind bereit, Neuland zu betreten und erste Schritte in Richtung Innovation zu machen.";
+                    text2="Bereit für die ersten Schritte. Dann nehmen Sie doch gerne an einer unserer Veranstaltungen zu KI teil und starten Sie in Ihrem Unternehmen mit Ihrer KI-Reise. Alle TIM-Angebote finden Sie in unserem Veranstaltungskalender.";
+                    break;
+                case 2:
+                    res = "EXPLORER ";
+                    text1=" Sie haben die Grundlagen gelegt und erkunden aktiv die Möglichkeiten, die KI für Ihr Unternehmen bieten kann. Erste Projekte laufen und Sie sind dabei, Ihre Kompetenzen auszubauen.";
+                    text2= "Brauchen Sie Unterstützung bei Ihren ersten KI-Pilotprojekten? TIM unterstützt Sie gerne bei der Umsetzung. Melden Sie sich einfach beim TIM-Team unter <a href='mailto:info@tim-transformiert.de'>info@tim-transformiert.de</a>." ;
+                    break;
+                case 3:
+                    res = "INNOVATOR";
+                    text1="Ihr Unternehmen setzt KI strategisch ein, um Prozesse zu optimieren und neue Chancen zu erschließen. Sie treiben Innovation voran und nutzen KI, um sich in einer dynamischen Geschäftswelt zu behaupten.";
+                    text2="Suchen Sie noch Inspiration für Ihre nächsten Schritte? Dann werfen Sie gerne mal einen Blick in unserem TIM-Veranstaltungskalender. Wir bieten  mit unseren Workshops, Events und Arbeitskreise rund um das Thema KI eine ideal Grundlage für frische Ideen.  ";
+                    break;
+                case 4:
+                    res = "GAME CHANGER";
+                    text1="KI ist fest in Ihren Geschäftsprozessen verankert und Sie setzen Maßstäbe in Ihrer Branche. Mit einer starken Innovationskultur und fortschrittlichen Technologien prägen Sie die Zukunft Ihrer Branche.";
+                    text2="Interessiert Sie, wie andere Unternehmen Ihre KI-Strategie ausgerollt haben? Dann nehmen Sie gerne an einer unserer TIM-Netzwerkveranstaltungen teil und tauschen Sie sich mit anderen regionalen Unternehmen aus. Mehr dazu finden Sie in unserem Veranstaltungkalender.";
+                    break;
+                case 5:
+                    res = "VISONARY";
+                    text1="Ihr Unternehmen ist ein echter Vorreiter in der KI-Welt. Sie gestalten die Zukunft, indem Sie KI auf höchstem Niveau einsetzen und die Grenzen dessen, was möglich ist, kontinuierlich erweitern.";
+                    text2="Sie haben Lust Ihre Erfahrungen mit anderen regionalen Unternehmen zu teilen? Wir freuen uns immer unserem Netzwerk spannende Erfolgsgeschichten vorzustellen zu können. Kontaktieren Sie gerne das TIM-Team unter <a href='mailto:info@tim-transformiert.de'>info@tim-transformiert.de</a>.";
+                    break;
+                }
+
+            // Update the inner text of the left section or any specific element inside
+            leftSection.innerHTML=`
+                </br>
+                </br>
+            <div class="section">
+                
+                <h2 > Results </h2>
+                
+                <p>  You are a ${res}  </p>
+                <p> ${text1} </p>
+                <p> ${text2} </p>
+             </div>
+
+            <div class="section">
+            <h2> Measures </h2>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Maturity Level</th>
+                            <th>Suggestion</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>STRATEGIE</td>
+                            <td>${selectedValueSQ1}</td>
+                            <td>New York</td>
+                        </tr>
+                        <tr>
+                            <td>MITARBEITER*INNEN & KULTUR</td>
+                            <td>${selectedValueSQ2}</td>
+                            <td>Los Angeles</td>
+                        </tr>
+                        <tr>
+                            <td>ORGANISATION & PROZESSE</td>
+                            <td>${selectedValueSQ3}</td>
+                            <td>Chicago</td>
+                        </tr>
+                        <tr>
+                            <td> Result </td>
+                            <td> ${result_category}</td>
+                            <td> final </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>`;
+
+        })
+    });
+</script>
+    
+</body>
+
+</html>
